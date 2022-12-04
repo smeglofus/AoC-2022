@@ -1,17 +1,20 @@
 
 import csv
-f = open('\\Users\\Dell\\Desktop\\AoC2022\\01\\data.csv', 'r')
-obsah = f.readlines()
+with open('\\Users\\Dell\\Desktop\\AoC2022\\01\\data.csv', 'r') as f:
+    obsah = f.readlines()
 
-max = 0
+max = []
 cislo = 0
 
 for number in obsah:
     if len(number) > 2:
         cislo += int(number)
     if len(number) < 2:
-        if cislo > max:
-            max = cislo
+        max.append(cislo)
         cislo = 0
 
-print(max)
+max_num = sorted(max)[-1]
+max_three = sum(sorted(max)[-3:])
+
+print(max_num)
+print(max_three)
