@@ -19,23 +19,22 @@ with open('\\Users\\Dell\\Desktop\\AoC2022\\05\\data.csv', 'r') as f:
 
 sloupce = []
 
-"""move 1 from 3 to 9
-move 2 from 2 to 1
-move 3 from 5 to 4"""
+
 for s in range(9):
-        sl = []
+        rad = []
         for index,row in enumerate(obsah):
             toto = re.split('    | |\n',row)
             if toto[s] != '':
-                sl.append(toto[s])
-        sloupce.append(sl)
+                rad.append(toto[s])
+        sloupce.append(rad)
 
 for move in range(len(list_move)):
     for i in range(int(list_move[move])):
         ven = sloupce[int(list_from[move])-1].pop(0)
         add = sloupce[int(list_to[move])-1].insert(0, ven)
-slovo = ""
-for i in sloupce:
-    print(i[0])
+slova = []
 
-print(len("ZWHVFWQWW"))
+for i in sloupce:
+    slova.append(i[0].strip("[]"))
+
+print("".join(slova))
