@@ -1,4 +1,3 @@
-# je špatně 10609 7632
 
 
 with open('\\Users\\Dell\\Desktop\\AoC2022\\03\\data.csv', 'r') as f:
