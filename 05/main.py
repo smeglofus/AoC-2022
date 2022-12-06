@@ -28,13 +28,27 @@ for s in range(9):
                 rad.append(toto[s])
         sloupce.append(rad)
 
+"""basic"""
 for move in range(len(list_move)):
     for i in range(int(list_move[move])):
         ven = sloupce[int(list_from[move])-1].pop(0)
-        add = sloupce[int(list_to[move])-1].insert(0, ven)
-slova = []
+        add = sloupce[int(list_to[move])-1].insert(i, ven)
 
+    print(sloupce)
+
+"""harder"""
+for move in range(len(list_move)):
+    for i in range(int(list_move[move])):
+        ven = sloupce[int(list_from[move])-1].pop(0)
+        add = sloupce[int(list_to[move])-1].insert(i, ven)
+
+    print(sloupce)
+
+
+
+slova = []
 for i in sloupce:
     slova.append(i[0].strip("[]"))
 
 print("".join(slova))
+
