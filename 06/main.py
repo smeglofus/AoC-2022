@@ -12,13 +12,11 @@ def find_duplicate(kamo):
 
 for index, char in enumerate(data):
     slovo = data[index:index+14]
-    pismeno = char
-    if pismeno in slovo:
+    if char in slovo:
         if find_duplicate(slovo) == False and cil == "":
             print(index+14)
             cil = index+14
             print(cil,"je toto")
 
-print(find_duplicate("qmgbljsphdztnv"))
 
 
